@@ -2,11 +2,13 @@ package it.aleph.halls.impl.fate.impl.subhalls;
 
 import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Tailor;
+import it.aleph.halls.impl.fate.impl.ThreadHalls;
 import it.aleph.observer.chant.impl.NeverEndingChantOfFate;
+import it.aleph.observer.chant.music.impl.SacredChant;
 
-import static it.aleph.halls.chant.impl.enums.Note.DALED;
+import static it.aleph.halls.chant.impl.enums.Note.*;
 
-public class FourthHallOfRevelation implements Tailor<NeverEndingChantOfFate> {
+public class FourthHallOfRevelation implements Tailor<SacredChant<String, Note>> {
 
 
     private final static String FOURTH_REVELATION = """
@@ -16,7 +18,7 @@ public class FourthHallOfRevelation implements Tailor<NeverEndingChantOfFate> {
             """;
 
     @Override
-    public NeverEndingChantOfFate weaveFate() {
-        return new NeverEndingChantOfFate().weaveChant(DALED, FOURTH_REVELATION);
+    public SacredChant<String,Note> weaveFate() {
+        return ThreadHalls.invokeThreadHalls().revealHalls().get(GIMEL).weaveFate().compose(DALED, FOURTH_REVELATION);
     }
 }

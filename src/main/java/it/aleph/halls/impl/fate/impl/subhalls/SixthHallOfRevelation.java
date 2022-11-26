@@ -2,11 +2,12 @@ package it.aleph.halls.impl.fate.impl.subhalls;
 
 import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Tailor;
-import it.aleph.observer.chant.impl.NeverEndingChantOfFate;
+import it.aleph.halls.impl.fate.impl.ThreadHalls;
+import it.aleph.observer.chant.music.impl.SacredChant;
 
-import static it.aleph.halls.chant.impl.enums.Note.VAV;
+import static it.aleph.halls.chant.impl.enums.Note.*;
 
-public class SixthHallOfRevelation implements Tailor<NeverEndingChantOfFate> {
+public class SixthHallOfRevelation implements Tailor<SacredChant<String, Note>> {
 
     private final static String SIXTH_REVELATION = """
             Tutto infatti è intessuto in questa Rete infinita,
@@ -19,7 +20,7 @@ public class SixthHallOfRevelation implements Tailor<NeverEndingChantOfFate> {
 
 
     @Override
-    public NeverEndingChantOfFate weaveFate() {
-        return new NeverEndingChantOfFate().weaveChant(VAV, SIXTH_REVELATION);
+    public SacredChant<String, Note> weaveFate() {
+        return ThreadHalls.invokeThreadHalls().revealHalls().get(HEI).weaveFate().compose(VAV, SIXTH_REVELATION);
     }
 }

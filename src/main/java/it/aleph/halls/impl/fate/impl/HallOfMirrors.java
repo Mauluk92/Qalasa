@@ -1,11 +1,14 @@
 package it.aleph.halls.impl.fate.impl;
 
+import it.aleph.halls.chant.Chant;
 import it.aleph.halls.chant.impl.ChantOfTheHalls;
 import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Halls;
 import it.aleph.halls.impl.fate.Tailor;
 import it.aleph.observer.chant.impl.NeverEndingSong;
+import it.aleph.observer.chant.music.impl.SacredChant;
 import it.aleph.observer.link.impl.EnchantedMirror;
+import it.aleph.spell.Spell;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,24 +31,20 @@ public class HallOfMirrors extends Halls<ChantOfTheHalls> implements Tailor<List
     }
 
     private List<EnchantedMirror> moldGlassOfFate(){
-        ChantOfTheHalls sacredChant = recursiveChant(generateChants(), ChantOfTheHalls::compose);
         List<EnchantedMirror> mirrorsOfFate =  Arrays
                 .stream(Note.values())
                 .map(EnchantedMirror::new)
                 .collect(Collectors.toList());
-        mirrorsOfFate.forEach(sacredChant::tune);
+        mirrorsOfFate.forEach(chant()::tune);
         return mirrorsOfFate;
     }
 
-    private List<ChantOfTheHalls> generateChants(){
+    private Chant<EnchantedMirror> chant(){
         var spells = HallOfGenesis.invokeHallOfGenesis().weaveFate();
-        return Arrays
-                .stream(Note.values())
-                .map((note) ->
-                        new NeverEndingSong()
-                        .weaveChant(note, spells.get(note))
-                                .sing())
-                .collect(Collectors.toList());
+        SacredChant<Spell, EnchantedMirror> sacredChant = new SacredChant<>(new NeverEndingSong());
+
+        Arrays.stream(Note.values()).forEach((note) -> sacredChant.compose(note, spells.get(note)));
+        return sacredChant.reveal();
     }
 
     public static HallOfMirrors invokeHallOfMirrors(){

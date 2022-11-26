@@ -1,10 +1,21 @@
 package it.aleph.observer.impl;
 
-import it.aleph.purification.BreakTheWheelOfExistence;
+import it.aleph.halls.chant.Chant;
+import it.aleph.halls.chant.impl.ChantOfTheHalls;
+import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.net.QalasaNet;
+import it.aleph.net.impl.QalasaPearl;
 import it.aleph.observer.Observer;
+import it.aleph.observer.chant.impl.NeverEndingChantOfFate;
+import it.aleph.observer.chant.impl.NeverEndingChantOfGenesis;
+import it.aleph.observer.chant.impl.NeverEndingSong;
+import it.aleph.observer.chant.music.impl.SacredChant;
 import it.aleph.observer.link.impl.EnchantedMirror;
+import it.aleph.purification.BreakTheWheelOfExistence;
+import it.aleph.spell.Spell;
 import it.aleph.wanderer.impl.Samala;
+
+import java.util.List;
 
 import static it.aleph.halls.chant.impl.enums.Note.VAV;
 import static it.aleph.spell.impl.enums.Verb.NE;
@@ -21,7 +32,14 @@ public class Qalasa implements Observer {
 
     private final QalasaNet qalasaNet;
 
+
+    private final SacredChant<List<QalasaPearl<EnchantedMirror>>, QalasaPearl<EnchantedMirror>> sacredChantOfGenesis;
+    private final SacredChant<Spell, EnchantedMirror> sacredNeverEndingChant;
+
     private Qalasa(){
+
+        this.sacredChantOfGenesis = new SacredChant<>(new NeverEndingChantOfGenesis());
+        this.sacredNeverEndingChant = new SacredChant<>(new NeverEndingSong());
         this.qalasaNet = new QalasaNet();
     }
 

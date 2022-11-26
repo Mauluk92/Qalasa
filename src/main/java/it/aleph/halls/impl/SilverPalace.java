@@ -32,7 +32,7 @@ public class SilverPalace extends Halls<NeverEndingChantOfQalasa> implements Gen
 
     @Override
     public void chant() {
-        Arrays.stream(values()).toList().forEach(ThreadHalls.invokeThreadHalls().weaveFate()::tune);
+        ThreadHalls.invokeThreadHalls().weaveFate();
         var qalasaPearlsOfFate = Stream.generate(HallOfQalasa.invokeHallOfJudgment()::weaveFate).limit(Note.values().length).toList();
         var mirrorsOfFate = HallOfMirrors.invokeHallOfMirrors().weaveFate();
         IntStream.range(0, 7).forEach((order) -> qalasaPearlsOfFate.get(order).endowEssence(mirrorsOfFate.get(order)));

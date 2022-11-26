@@ -1,46 +1,51 @@
 package it.aleph.halls.impl.fate.impl;
 
-import it.aleph.halls.chant.impl.ThreadOfFate;
-import it.aleph.halls.impl.fate.Halls;
+import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Tailor;
 import it.aleph.halls.impl.fate.impl.subhalls.*;
-import it.aleph.observer.chant.impl.NeverEndingChantOfFate;
+import it.aleph.observer.chant.music.impl.SacredChant;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+
+import static it.aleph.halls.chant.impl.enums.Note.*;
 
 /**
  * In these halls the fate of mortals is woven.
  */
-public class ThreadHalls extends Halls<ThreadOfFate> implements Tailor<ThreadOfFate>{
+public class ThreadHalls implements Tailor<Void> {
 
     private static ThreadHalls THREAD_HALLS;
-
-    private final List<Tailor<NeverEndingChantOfFate>> hallsOfFate;
+    private final Map<Note, Tailor<SacredChant<String, Note>>> hallsOfFate;
 
     private ThreadHalls(){
-        this.hallsOfFate = List.of(
-                new FirstHallOfRevelation(),
-                new SecondHallOfRevelation(),
-                new ThirdHallOfRevelation(),
-                new FourthHallOfRevelation(),
-                new FifthHallOfRevelation(),
-                new SixthHallOfRevelation(),
-                new SeventhHallOfRevelation()
+        this.hallsOfFate = Map.of(
+                ALEPH,new FirstHallOfRevelation(),
+                BET,new SecondHallOfRevelation(),
+                GIMEL,new ThirdHallOfRevelation(),
+                DALED,new FourthHallOfRevelation(),
+                HEI,new FifthHallOfRevelation(),
+                VAV,new SixthHallOfRevelation(),
+                ZAYN,new SeventhHallOfRevelation()
         );
     }
 
-    @Override
-    public ThreadOfFate weaveFate() {
-        var revelations = this.hallsOfFate.stream()
-                .map(Tailor::weaveFate)
-                .map(NeverEndingChantOfFate::sing)
-                .toList();
 
-
-
-        return recursiveChant(revelations, ThreadOfFate::compose);
+    public Void weaveFate() {
+        Arrays
+                .stream(Note.values())
+                .toList()
+                .forEach(hallsOfFate.get(ZAYN)
+                        .weaveFate()
+                        .reveal()::tune);
+        return null;
     }
 
+    public Map<Note, Tailor<SacredChant<String, Note>>> revealHalls() {
+        return this.hallsOfFate;
+    }
 
     public static ThreadHalls invokeThreadHalls(){
         if(THREAD_HALLS == null){
