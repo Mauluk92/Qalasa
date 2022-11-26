@@ -1,4 +1,5 @@
-target
-pom.xml
-test
-resources
+
+./pom.xml
+./src/test
+./.idea
+./target
