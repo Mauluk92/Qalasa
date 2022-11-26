@@ -1,0 +1,23 @@
+package it.aleph.halls.impl.fate.impl.subhalls;
+
+
+import it.aleph.halls.impl.fate.Tailor;
+import it.aleph.observer.chant.impl.NeverEndingChantOfFate;
+
+import static it.aleph.halls.chant.impl.enums.Note.BET;
+
+public class SecondHallOfRevelation implements Tailor<NeverEndingChantOfFate> {
+
+    private final static String SECOND_REVELATION = """
+            In principio era solo il caos ruggente di Millevoci dell'Abisso.
+            Una cacofonia priva di senso e ordine, il vorticare ignoto
+            degli elementi.
+            Ma con il mio Canto ho domato il mare in tempesta del Vuoto.
+            Dando forma al senza-forma...
+            """;
+
+    @Override
+    public NeverEndingChantOfFate weaveFate() {
+        return new NeverEndingChantOfFate().weaveChant(BET, SECOND_REVELATION);
+    }
+}
