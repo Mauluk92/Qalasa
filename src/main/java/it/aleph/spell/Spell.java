@@ -5,7 +5,6 @@ package it.aleph.spell;
  * can be its own hell or paradise, can chain or unbind, destroy or create.
  */
 public interface Spell {
-
     Boolean trace();
 
 }

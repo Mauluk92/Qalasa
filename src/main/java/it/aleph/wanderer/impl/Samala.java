@@ -16,7 +16,10 @@ import static it.aleph.spell.impl.enums.Verb.QY;
 import static it.aleph.wanderer.impl.enums.SoulState.CORRUPTED_STATE;
 import static it.aleph.wanderer.impl.enums.SoulState.PURIFIED_STATE;
 
-
+/**
+ * Samalà was once a powerful wizard that came from the kingdom of stars, a plane of existence really close
+ * to the Void plane, which embrace everything.
+ */
 public class Samala implements Wanderer<EnchantedMirror> {
 
     private static Samala rose;

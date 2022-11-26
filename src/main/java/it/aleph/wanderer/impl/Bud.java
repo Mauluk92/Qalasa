@@ -1,10 +1,11 @@
 package it.aleph.wanderer.impl;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ListIterator;
 import java.util.Scanner;
 
+/**
+ * The bud of a mortal soul, its rose, is the innermost core essence, the spark endowed by Qalasà herself.
+ */
 public class Bud {
 
 
