@@ -44,32 +44,6 @@ public class SilverPalace extends SilverGearsOfQalasaPalace<Note, EnchantedMirro
 
     }
 
-    //    @Override
-//    public void chant() {
-//        ThreadHalls.invokeThreadHalls().weaveFate();
-//        var qalasaPearlsOfFate = Stream.generate(HallOfQalasa.invokeHallOfJudgment()::weaveFate).limit(Note.values().length).toList();
-//        var mirrorsOfFate = HallOfMirrors.invokeHallOfMirrors().weaveFate();
-//        IntStream.range(0, 7).forEach((order) -> qalasaPearlsOfFate.get(order).endowEssence(mirrorsOfFate.get(order)));
-//        this.pearlsOfFate = qalasaPearlsOfFate;
-//        dominateVoid();
-//        Qalasa.invokeQalasa().mutate(Qalasa.invokeQalasa().unfoldNet().unfoldPeregrinage().getEssence());
-//
-//    }
-
-//    private void dominateVoid(){
-//
-//         var sacredChant = new SacredChant<>(new NeverEndingChantOfGenesis())
-//                 .compose(ALEPH, tuneNeverEndingChant(List.of(ALEPH, BET)))
-//                 .compose(BET, tuneNeverEndingChant(List.of(ALEPH, BET, GIMEL, HEI)))
-//                 .compose(GIMEL, tuneNeverEndingChant(List.of(GIMEL, BET, DALED)))
-//                 .compose(DALED, tuneNeverEndingChant(List.of(DALED, GIMEL, VAV, HEI, ZAYN)))
-//                 .compose(VAV, tuneNeverEndingChant(List.of(VAV, DALED)))
-//                 .compose(HEI, tuneNeverEndingChant(List.of(HEI, DALED, BET)))
-//                 .compose(ZAYN, tuneNeverEndingChant(List.of(ZAYN, DALED)))
-//                 .reveal();
-//        this.pearlsOfFate.forEach(sacredChant::tune);
-//    }
-
     public static SilverPalace fromVoid(){
         if(SILVER_PALACE == null){
             SILVER_PALACE = new SilverPalace();
