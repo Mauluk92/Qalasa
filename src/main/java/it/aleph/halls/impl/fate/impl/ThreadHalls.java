@@ -3,11 +3,9 @@ package it.aleph.halls.impl.fate.impl;
 import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Tailor;
 import it.aleph.halls.impl.fate.impl.subhalls.*;
-import it.aleph.observer.chant.music.impl.SacredChant;
+import it.aleph.music.impl.SacredChant;
 
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 import static it.aleph.halls.chant.impl.enums.Note.*;

@@ -10,27 +10,19 @@ import it.aleph.spell.Spell;
  * The mirrors of the halls of judgment reflects the soul of those who wander inside the halls of Qalasà,
  * may her name be blessed
  */
-public class EnchantedMirror implements Link {
+public class EnchantedMirror implements Link<Note> {
     Observer qalasaSight;
-    private Spell enchantment;
+    private Spell essence;
+    private Note note;
+    public Note revealEssence() { return this.note;}
 
-    private final Note note;
+    public Spell revealSpell() {return this.essence;}
 
-    public EnchantedMirror(Note note){
-        this.note = note;
-    }
-    public Spell revealSpell() {
-        return enchantment;
-    }
-    public void enchantMirror(Spell spell) {
-        this.enchantment = spell;
-    }
-    public Note sing(){
-        return this.note;
-    }
+    public void enchantMirror(Spell spell) { this.essence = spell;}
     @Override
-    public void attach(Observer observer) {
+    public void attach(Observer observer, Note note) {
         this.qalasaSight = observer;
+        this.note = note;
     }
 
     @Override

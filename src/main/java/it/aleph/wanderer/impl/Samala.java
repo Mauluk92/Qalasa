@@ -56,7 +56,7 @@ public class Samala implements Wanderer<EnchantedMirror> {
 
     @Override
     public void wander(EnchantedMirror mirror) {
-        System.out.println(mirror.revealSpell().toString());
+        System.out.println(mirror.revealSpell());
         if(mirror.revealSpell() instanceof Rest){
             switch (bud.unfold(Arrays.stream(Verb.values()).toList().listIterator())){
                 case 0 -> ((Rest) mirror.revealSpell()).endowVerb(NE);

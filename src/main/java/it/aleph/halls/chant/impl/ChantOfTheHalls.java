@@ -16,9 +16,8 @@ public class ChantOfTheHalls implements Chant<EnchantedMirror> {
 
     @Override
     public void tune(EnchantedMirror scoreOfFate) {
-        if(essence.note() == scoreOfFate.sing()) {
+        if(scoreOfFate.revealEssence() == essence.note()) {
             scoreOfFate.enchantMirror(essence.spell());
-            scoreOfFate.attach(Qalasa.invokeQalasa());
         }else{
             sing(scoreOfFate);
         }

@@ -1,4 +1,4 @@
-package it.aleph.observer.chant.music;
+package it.aleph.music;
 
 import it.aleph.halls.chant.impl.enums.Note;
 

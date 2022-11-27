@@ -7,7 +7,7 @@ import it.aleph.net.impl.QalasaPearl;
 import it.aleph.observer.link.Link;
 import it.aleph.observer.link.impl.EnchantedMirror;
 
-public interface Weaver<T extends Link> {
+public interface Weaver<T extends Link<?>> {
 
     Weaver<T> weave(QalasaPearl<T> qalasaPearl);
 

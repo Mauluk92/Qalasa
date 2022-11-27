@@ -14,7 +14,7 @@ public abstract class Monad<T> {
 
     private T essence;
     public Monad(){}
-    public Monad(T essence, Verb command){
+    public Monad(T essence){
         this.essence = essence;
     }
 

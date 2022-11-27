@@ -3,7 +3,7 @@ package it.aleph.halls.impl.fate.impl.subhalls;
 import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.fate.Tailor;
 import it.aleph.halls.impl.fate.impl.ThreadHalls;
-import it.aleph.observer.chant.music.impl.SacredChant;
+import it.aleph.music.impl.SacredChant;
 
 import static it.aleph.halls.chant.impl.enums.Note.*;
 

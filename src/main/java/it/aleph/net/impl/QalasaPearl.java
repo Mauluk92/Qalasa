@@ -3,6 +3,7 @@ package it.aleph.net.impl;
 import it.aleph.net.Monad;
 import it.aleph.observer.impl.Qalasa;
 import it.aleph.observer.link.Link;
+import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.spell.impl.enums.Verb;
 
 import static it.aleph.spell.impl.enums.Verb.NE;
@@ -12,11 +13,10 @@ import static it.aleph.spell.impl.enums.Verb.NE;
  * which reflects all other pearls.
  * @param <T>
  */
-public class QalasaPearl<T extends Link> extends Monad<T> {
+public class QalasaPearl<T extends Link<?>> extends Monad<T> {
     private Verb qalasaWord;
     @Override
     public void endowEssence(T essence) {
-        essence.attach(Qalasa.invokeQalasa());
         super.endowEssence(essence);
     }
 
@@ -33,7 +33,7 @@ public class QalasaPearl<T extends Link> extends Monad<T> {
     public String toString() {
         var light = " è circonfusa da luce";
         var darkness = " è avvolta dalle tenebre";
-        return "La sala " + getEssence().toString() + (qalasaWord == NE ? light : darkness);
+        return "La sala " + getEssence() + (qalasaWord == NE ? light : darkness);
 
     }
 }

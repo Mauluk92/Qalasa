@@ -14,16 +14,26 @@ import java.util.List;
 public class NeverEndingChantOfQalasa implements Chant<QalasaPearl<EnchantedMirror>> {
 
     private Chant<QalasaPearl<EnchantedMirror>> song;
-    private List<QalasaPearl<EnchantedMirror>> connection;
+    private List<Note> counterMelody;
     private Note note;
 
     @Override
     public void tune(QalasaPearl<EnchantedMirror> scoreOfFate) {
-        if(note == scoreOfFate.getEssence().sing()){
-            Qalasa.invokeQalasa().unfoldNet().weave(scoreOfFate);
-            connection.forEach((pearl) -> {
-                Qalasa.invokeQalasa().unfoldNet().weave(scoreOfFate, pearl);
-            });
+        if(note == scoreOfFate.getEssence().revealEssence()){
+           Qalasa.invokeQalasa()
+                   .unfoldNet()
+                   .getNet()
+                   .keySet()
+                   .stream()
+                   .filter((qalasaPearl -> counterMelody
+                           .contains(qalasaPearl
+                                   .getEssence()
+                                   .revealEssence()
+                                   )))
+                   .forEach((qalasaPearl -> Qalasa
+                           .invokeQalasa()
+                           .unfoldNet()
+                           .weave(scoreOfFate, qalasaPearl)));
         }else{
             sing(scoreOfFate);
         }
@@ -44,7 +54,7 @@ public class NeverEndingChantOfQalasa implements Chant<QalasaPearl<EnchantedMirr
         this.note = note;
     }
 
-    public void tuneWeavingSong(List<QalasaPearl<EnchantedMirror>> connection) {
-        this.connection = connection;
+    public void tuneWeavingSong(List<Note> counterMelody) {
+        this.counterMelody = counterMelody;
     }
 }
