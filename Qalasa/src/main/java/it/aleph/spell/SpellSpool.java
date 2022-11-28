@@ -1,6 +1,5 @@
 package it.aleph.spell;
 
-import it.aleph.spell.Spell;
 import it.aleph.spell.impl.enums.Sigill;
 import it.aleph.spell.impl.enums.Verb;
 

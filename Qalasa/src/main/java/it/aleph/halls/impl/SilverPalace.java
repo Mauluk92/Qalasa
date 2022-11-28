@@ -17,7 +17,6 @@ import it.aleph.spell.AbstractSpell;
 import it.aleph.spell.Spell;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static it.aleph.halls.chant.impl.enums.Note.*;

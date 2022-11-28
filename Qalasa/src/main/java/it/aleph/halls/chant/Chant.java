@@ -1,7 +1,5 @@
 package it.aleph.halls.chant;
 
-import it.aleph.halls.chant.impl.enums.Note;
-
 /**
  * Nothing exists without music, because music gives order to the cacophony of Many Voice
  * @param <T>

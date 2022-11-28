@@ -1,7 +1,5 @@
 package it.aleph.net;
 
-import it.aleph.spell.impl.enums.Verb;
-
 /**
  * Represents a "monad", the atomic unit of existence of what constitute a slice of space/time in this world.
  * Everything which exists, exists inside a vertex. Each vertex has an intrinsic life of its own, while being

@@ -1,9 +1,5 @@
 package it.aleph.halls.chant.impl.enums;
 
-import it.aleph.spell.AbstractSpell;
-
-import java.util.function.Predicate;
-
 /**
  * Notes are the chains through which our Lady gave form to the chaos of Many Voice From The Abyss
  */

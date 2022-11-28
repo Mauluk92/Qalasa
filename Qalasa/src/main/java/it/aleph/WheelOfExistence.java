@@ -1,6 +1,5 @@
 package it.aleph;
 
-import it.aleph.halls.chant.impl.enums.Note;
 import it.aleph.halls.impl.SilverPalace;
 import it.aleph.observer.impl.Qalasa;
 import it.aleph.wanderer.impl.Samala;

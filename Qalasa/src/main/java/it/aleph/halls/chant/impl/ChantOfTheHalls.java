@@ -1,7 +1,6 @@
 package it.aleph.halls.chant.impl;
 
 import it.aleph.halls.chant.Chant;
-import it.aleph.observer.impl.Qalasa;
 import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.observer.link.impl.essence.Essence;
 

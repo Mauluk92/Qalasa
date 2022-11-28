@@ -1,9 +1,7 @@
 package it.aleph.net.impl;
 
 import it.aleph.net.Monad;
-import it.aleph.observer.impl.Qalasa;
 import it.aleph.observer.link.Link;
-import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.spell.impl.enums.Verb;
 
 import static it.aleph.spell.impl.enums.Verb.NE;

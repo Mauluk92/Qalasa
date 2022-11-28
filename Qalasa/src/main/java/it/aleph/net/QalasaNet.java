@@ -1,15 +1,12 @@
 package it.aleph.net;
 
 import it.aleph.net.impl.QalasaPearl;
-import it.aleph.observer.impl.Qalasa;
 import it.aleph.observer.link.impl.EnchantedMirror;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static it.aleph.halls.chant.impl.enums.Note.ALEPH;
 
 /**
  * The net of existence. Its substance is Qalasà herself, may her name be blessed seven times

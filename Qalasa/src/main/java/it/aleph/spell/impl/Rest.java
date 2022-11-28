@@ -1,7 +1,6 @@
 package it.aleph.spell.impl;
 
 import it.aleph.spell.AbstractSpell;
-import it.aleph.spell.Spell;
 import it.aleph.spell.impl.enums.Verb;
 
 public class Rest extends AbstractSpell {
