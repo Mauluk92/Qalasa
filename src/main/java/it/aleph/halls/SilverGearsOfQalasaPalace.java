@@ -8,11 +8,14 @@ import it.aleph.spell.AbstractSpell;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static it.aleph.halls.chant.impl.enums.Note.ALEPH;
-
+/**
+ * The ever-moving mechanism of the Silver Palace of Qalasà, seven times may she blessed.
+ * Each gear perfectly fit into one another and their movement expands the countless chants of our Lady,
+ * giving life to the Net through an everlasting symphony.
+ * @param <Note> the unit of music
+ * @param <T> the entity bound by the note
+ */
 public abstract class SilverGearsOfQalasaPalace<Note extends Enum<?>, T extends Link<Note>> implements Genesis {
 
 
@@ -28,9 +31,7 @@ public abstract class SilverGearsOfQalasaPalace<Note extends Enum<?>, T extends 
         solmization().forEach((note) -> pearlsOfFate.get(note).endowEssence(mirrors.get(note)));
         var sacredChantOfQalasa = weaveNet(generateCounterChant());
         solmization().forEach((note) -> sacredChantOfQalasa.tune(pearlsOfFate.get(note)));
-
     }
-
 
     abstract public List<Note> solmization();
     abstract public Map<Note, T> moldMirrorsOfFate();

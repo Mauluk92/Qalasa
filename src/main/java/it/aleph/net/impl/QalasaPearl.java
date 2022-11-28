@@ -13,7 +13,7 @@ import static it.aleph.spell.impl.enums.Verb.NE;
  * which reflects all other pearls.
  * @param <T>
  */
-public class QalasaPearl<T extends Link<?>> extends Monad<T> {
+public class QalasaPearl<T extends Link<? extends Enum<?>>> extends Monad<T> {
     private Verb qalasaWord;
     @Override
     public void endowEssence(T essence) {
