@@ -6,7 +6,7 @@ Qalasà is the psychopomp and all-creator of universe. As such, when souls die,
 she judges them through a trial, inside a mirror labyrinth.
 But the mirrors reflect the soul of the observer.
 Since everything that exists, exists because of Qalasà, nothing
-can escape her sight, and to be freed means to receive her Grace by meeting her in the labyrinth..
+can escape her sight and to be freed means to receive her Grace by meeting her in the labyrinth..
 ## Prelude
 
 This project was born due to a creative streak I was following, a game I played while trying to learn the design patterns
