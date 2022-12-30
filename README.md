@@ -16,6 +16,11 @@ I put inside this labyrinth references to Vedic philosophy, (the net of Qalasà 
  music (many operations involves the manipulations of _Notes_, and builders of structure are _Chants_).
 I consider this an artistic project instead of a _technical_ one.
 
+There are three version of this project:
+- One with pure Java code (the branch main)
+- Another one with spring and XML metadata configuration (spring/xml branch)
+- The third one is with spring and annotation-based configuration, without XML (spring/annotation branch)
+
 ## Functionality
 
 The project is, in itself, a _framework_ to build labyrinths.
