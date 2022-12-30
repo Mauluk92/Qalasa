@@ -13,13 +13,14 @@ import static it.aleph.spell.impl.enums.Verb.NE;
  */
 public class QalasaPearl<T extends Link<? extends Enum<?>>> extends Monad<T> {
     private Verb qalasaWord;
-    @Override
-    public void endowEssence(T essence) {
+
+
+    public void setEssence(T essence) {
         super.endowEssence(essence);
     }
 
 
-    public void speakVerb(Verb verb){
+    public void setVerb(Verb verb){
         this.qalasaWord = verb;
     }
 

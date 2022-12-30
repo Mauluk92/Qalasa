@@ -2,6 +2,7 @@ package it.aleph.wanderer.impl;
 
 
 import it.aleph.net.impl.QalasaPearl;
+import it.aleph.observer.Observer;
 import it.aleph.observer.impl.Qalasa;
 import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.spell.impl.Rest;
@@ -22,12 +23,26 @@ import static it.aleph.wanderer.impl.enums.SoulState.PURIFIED_STATE;
  */
 public class Samala implements Wanderer<EnchantedMirror> {
 
-    private static Samala rose;
-    private final Bud bud = Bud.blossom();
+    private final Bud bud;
     private SoulState purifiedState;
 
-    private Samala(SoulState purifiedState){
+    private Qalasa qalasaSight;
+
+    public Samala(SoulState purifiedState, Bud bud){
         this.purifiedState = purifiedState;
+        this.bud = bud;
+    }
+
+    public void setQalasaSight(Qalasa qalasaSight) {
+        this.qalasaSight = qalasaSight;
+    }
+
+    public Qalasa getQalasaSight(){
+        return this.qalasaSight;
+    }
+
+    public Bud getBud(){
+        return this.bud;
     }
 
     @Override
@@ -35,9 +50,7 @@ public class Samala implements Wanderer<EnchantedMirror> {
 
         System.out.println(qalasaPearl);
         wander(qalasaPearl.getEssence());
-        var paths = Qalasa
-                .invokeQalasa()
-                .unfoldNet()
+        var paths = qalasaSight.getQalasaNet()
                 .getNet()
                 .get(qalasaPearl);
         var choice = bud.unfold(paths.listIterator());
@@ -66,12 +79,6 @@ public class Samala implements Wanderer<EnchantedMirror> {
         }
         mirror.propagate();
 
-    }
-    public static Samala getSoul() {
-        if (rose == null) {
-            rose = new Samala(CORRUPTED_STATE);
-        }
-        return rose;
     }
 
     public void purify(){

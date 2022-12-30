@@ -5,12 +5,12 @@ import it.aleph.net.impl.QalasaPearl;
 import it.aleph.observer.Observer;
 import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.purification.BreakTheWheelOfExistence;
-import it.aleph.wanderer.impl.Samala;
 
-import static it.aleph.halls.chant.impl.enums.Note.VAV;
+import java.util.List;
+
+import static it.aleph.observer.link.impl.enums.Note.VAV;
 import static it.aleph.spell.impl.enums.Verb.NE;
 import static it.aleph.spell.impl.enums.Verb.QY;
-import static it.aleph.wanderer.impl.enums.SoulState.PURIFIED_STATE;
 
 /**
  * Our Lady, whose unfathomable beauty is like the squaring of a circle, which holds everything inside her net
@@ -18,14 +18,16 @@ import static it.aleph.wanderer.impl.enums.SoulState.PURIFIED_STATE;
  */
 public class Qalasa implements Observer {
 
-    private static Qalasa QALASA;
-
-    private final QalasaNet qalasaNet;
+    private QalasaNet qalasaNet;
 
     private QalasaPearl<EnchantedMirror> pilgrimage;
 
-    private Qalasa(){
-        this.qalasaNet = new QalasaNet();
+    public QalasaNet getQalasaNet(){
+        return this.qalasaNet;
+    }
+
+    public void setQalasaNet(QalasaNet qalasaNet){
+        this.qalasaNet = qalasaNet;
     }
 
     public void setFate(QalasaPearl<EnchantedMirror> pilgrimage){
@@ -46,33 +48,18 @@ public class Qalasa implements Observer {
                 .getNet()
                 .keySet()
                 .forEach(monad -> monad
-                        .speakVerb(monad
+                        .setVerb(monad
                                 .getEssence()
                                 .revealSpell()
                                 .trace() ? NE : QY));
     }
 
-    public QalasaNet unfoldNet(){
-        return this.qalasaNet;
-    }
-
-    public static Qalasa invokeQalasa(){
-        if(QALASA == null){
-            QALASA = new Qalasa();
-        }
-        return QALASA;
-
-    }
-
     private void coda(){
-        Samala.getSoul().purify();
         System.out.println("A AND NOT A\n".repeat(7));
         breakTheWheel();
     }
 
     private void breakTheWheel(){
-        if(Samala.getSoul().judge() == PURIFIED_STATE){
             throw new BreakTheWheelOfExistence();
-        }
     }
 }

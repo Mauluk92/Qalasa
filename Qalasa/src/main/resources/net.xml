@@ -1,0 +1,63 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+     http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+    <util:list id="alephPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="alephPearl"/>
+        <ref bean="betPearl" />
+    </util:list>
+
+    <util:list id="betPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="alephPearl"/>
+        <ref bean="betPearl" />
+        <ref bean="gimelPearl"/>
+        <ref bean="heiPearl"/>
+    </util:list>
+
+    <util:list id="gimelPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="gimelPearl"/>
+        <ref bean="betPearl"/>
+        <ref bean="daledPearl"/>
+    </util:list>
+
+    <util:list id="daledPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="daledPearl"/>
+        <ref bean="gimelPearl"/>
+        <ref bean="vavPearl"/>
+        <ref bean="heiPearl"/>
+        <ref bean="zaynPearl"/>
+    </util:list>
+
+    <util:list id="vavPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="vavPearl"/>
+        <ref bean="daledPearl"/>
+    </util:list>
+
+    <util:list id="heiPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="heiPearl"/>
+        <ref bean="daledPearl"/>
+        <ref bean="betPearl" />
+    </util:list>
+
+    <util:list id="zaynPearlList" value-type="it.aleph.net.impl.QalasaPearl">
+        <ref bean="zaynPearl"/>
+        <ref bean="daledPearl"/>
+    </util:list>
+
+    <util:map id="labyrinthMap" key-type="it.aleph.net.impl.QalasaPearl" value-type="java.util.List">
+        <entry key-ref="alephPearl" value-ref="alephPearlList"/>
+        <entry key-ref="betPearl" value-ref="betPearlList"/>
+        <entry key-ref="gimelPearl" value-ref="gimelPearlList"/>
+        <entry key-ref="daledPearl" value-ref="daledPearlList"/>
+        <entry key-ref="vavPearl" value-ref="vavPearlList"/>
+        <entry key-ref="heiPearl" value-ref="heiPearlList"/>
+        <entry key-ref="zaynPearl" value-ref="zaynPearlList"/>
+    </util:map>
+
+    <bean id="qalasaNet" class="it.aleph.net.QalasaNet" p:net-ref="labyrinthMap"/>
+
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="pearlTemplate" abstract="true" class="it.aleph.net.impl.QalasaPearl"/>
+
+    <bean parent="pearlTemplate" id="alephPearl" p:essence-ref="alephMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="betPearl" p:essence-ref="betMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="gimelPearl" p:essence-ref="gimelMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="daledPearl" p:essence-ref="daledMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="heiPearl" p:essence-ref="heiMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="vavPearl" p:essence-ref="vavMirror" p:verb="NE"/>
+    <bean parent="pearlTemplate" id="zaynPearl" p:essence-ref="zaynMirror" p:verb="NE"/>
+</beans>

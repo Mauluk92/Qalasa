@@ -1,9 +1,10 @@
 package it.aleph.observer.link.impl;
 
 
-import it.aleph.halls.chant.impl.enums.Note;
+
 import it.aleph.observer.Observer;
 import it.aleph.observer.link.Link;
+import it.aleph.observer.link.impl.enums.Note;
 import it.aleph.spell.Spell;
 
 /**
@@ -11,19 +12,23 @@ import it.aleph.spell.Spell;
  * may her name be blessed
  */
 public class EnchantedMirror implements Link<Note> {
-    Observer qalasaSight;
+    private Observer qalasaSight;
     private Spell essence;
     private Note note;
     public Note revealEssence() { return this.note;}
 
     public Spell revealSpell() {return this.essence;}
 
-    public void enchantMirror(Spell spell) { this.essence = spell;}
-    @Override
-    public void attach(Observer observer, Note note) {
+    public void setEssence(Spell spell) { this.essence = spell;}
+
+    public void setQalasaSight(Observer observer){
         this.qalasaSight = observer;
+    }
+
+    public void setNote(Note note){
         this.note = note;
     }
+
 
     @Override
     public void propagate() {

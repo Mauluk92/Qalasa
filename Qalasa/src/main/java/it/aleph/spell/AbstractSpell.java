@@ -26,7 +26,7 @@ public abstract class AbstractSpell implements Spell, SpellSpool {
     @Override
     public AbstractSpell rest(Sigill sigill, Verb verb) {
         var rest = new Rest();
-        rest.endowWord(new Word(verb, sigill));
+        rest.setCommandWord(new Word(verb, sigill));
         return rest;
     }
     @Override

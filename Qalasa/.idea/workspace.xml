@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d4b4a4b-87fb-4737-b85e-b48c383ff614" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/aleph/observer/SilverPalace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/impl/enums/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/compoundSpell.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mirror.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/net.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pearl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/qalasa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/samala.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/simpleSpell.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Qalasa2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/WheelOfExistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/WheelOfExistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/abyss/Abyss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/abyss/impl/ManyVoiceFromTheAbyss.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/abyss/impl/MonadCacophony.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/abyss/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/Genesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/SilverGearsOfQalasaPalace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/chant/Chant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/chant/impl/ChantOfTheHalls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/chant/impl/NeverEndingChantOfQalasa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/chant/impl/ThreadOfFate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/chant/impl/enums/Note.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/SilverPalace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/Halls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/Tailor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/ThreadHalls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/score/Compose.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/score/impl/LabyrinthScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/FifthHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/FirstHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/FourthHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/SecondHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/SeventhHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/SixthHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/impl/fate/impl/subhalls/ThirdHallOfRevelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/halls/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/music/MetaChant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/music/SacredComposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/music/impl/SacredChant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/music/impl/SacredScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/music/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/net/QalasaNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/net/QalasaNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/net/impl/QalasaPearl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/net/impl/QalasaPearl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/chant/ChantWeaver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/chant/impl/NeverEndingChantOfFate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/chant/impl/NeverEndingChantOfGenesis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/chant/impl/NeverEndingSong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/impl/Qalasa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/observer/impl/Qalasa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/impl/EnchantedMirror.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/impl/EnchantedMirror.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/observer/link/impl/essence/Essence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/spell/AbstractSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/spell/AbstractSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/spell/impl/Rest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/spell/impl/Rest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/wanderer/impl/Bud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/wanderer/impl/Bud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/aleph/wanderer/impl/Samala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/aleph/wanderer/impl/Samala.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2JZlcPaRsEi3nUPrx7n7aTMWKcu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\IdeaProjects\Qalasa2\Qalasa\src\main\resources" />
+      <recent name="C:\Users\acer\IdeaProjects\Qalasa2\Qalasa\src\main\resources\labyrinth" />
+      <recent name="C:\Users\acer\IdeaProjects\Qalasa2\Qalasa\src\main\resources\labyrinth\spell" />
+      <recent name="C:\Users\acer\IdeaProjects\Qalasa2\Qalasa\src\main\resources\spell" />
+      <recent name="C:\Users\acer\IdeaProjects\Qalasa2\Qalasa\src\main\java" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d4b4a4b-87fb-4737-b85e-b48c383ff614" name="Changes" comment="" />
+      <created>1672293569308</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672293569308</updated>
+      <workItem from="1672293571208" duration="110000" />
+      <workItem from="1672294664364" duration="64000" />
+      <workItem from="1672295439351" duration="19298000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean abstract="true" id="mirrorTemplate" class="it.aleph.observer.link.impl.EnchantedMirror" p:qalasaSight-ref="qalasa"/>
+    <bean parent="mirrorTemplate" id="alephMirror" p:note="ALEPH" p:essence-ref="restAleph"/>
+    <bean parent="mirrorTemplate" id="betMirror" p:note="BET" p:essence-ref="bet"/>
+    <bean parent="mirrorTemplate" id="gimelMirror" p:note="GIMEL" p:essence-ref="restGimel"/>
+    <bean parent="mirrorTemplate" id="daledMirror" p:note="DALED" p:essence-ref="restDaled"/>
+    <bean parent="mirrorTemplate" id="heiMirror" p:note="HEI" p:essence-ref="hei"/>
+    <bean parent="mirrorTemplate" id="vavMirror" p:note="VAV" p:essence-ref="vav"/>
+    <bean parent="mirrorTemplate" id="zaynMirror" p:note="ZAYN" p:essence-ref="restZayn"/>
+</beans>

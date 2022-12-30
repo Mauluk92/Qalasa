@@ -12,7 +12,7 @@ public class Rest extends AbstractSpell {
         return true;
     }
 
-    public void endowWord(Word word){
+    public void setCommandWord(Word word){
         this.commandWord = word;
     }
     public void endowVerb(Verb verb){

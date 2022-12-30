@@ -1,5 +1,6 @@
 package it.aleph.wanderer.impl;
 
+import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
@@ -8,15 +9,13 @@ import java.util.Scanner;
  */
 public class Bud {
 
-
-    private static Bud bud;
     private final Scanner mind = new Scanner(System.in);
 
-
-    private Bud(){}
-
-    public void contemplate(){
-        mind.nextLine();
+    public void contemplate(List<String> fate){
+        fate.forEach(revelation -> {
+            System.out.println(revelation);
+            mind.nextLine();
+        });
     }
 
     public <T> int unfold(ListIterator<T> paths){
@@ -24,13 +23,6 @@ public class Bud {
             System.out.printf("%-2s %s\n", paths.nextIndex(), paths.next());
         }
         return revealBud(paths.nextIndex());
-    }
-
-    public static Bud blossom(){
-        if(bud == null){
-            bud = new Bud();
-        }
-        return bud;
     }
 
     public int revealBud(Integer order){
