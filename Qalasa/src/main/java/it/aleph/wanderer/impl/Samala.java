@@ -90,10 +90,6 @@ public class Samala implements Wanderer<EnchantedMirror> {
 
     }
 
-    public Bud revealBud(){
-        return this.bud;
-    }
-
     @Override
     public void wander(EnchantedMirror mirror) {
         System.out.println(mirror.revealSpell());
