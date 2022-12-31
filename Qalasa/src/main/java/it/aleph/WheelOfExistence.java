@@ -1,10 +1,14 @@
 package it.aleph;
 
 
-import it.aleph.observer.SilverPalace;
+import it.aleph.config.PearlConfig;
+import it.aleph.config.QalasaConfig;
+import it.aleph.net.impl.QalasaPearl;
+import it.aleph.observer.impl.Qalasa;
+import it.aleph.observer.link.impl.EnchantedMirror;
 import it.aleph.wanderer.impl.Samala;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * This is the circle of birth, death and rebirth each soul has to go through in order to be purified
@@ -13,16 +17,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class WheelOfExistence {
     public static void main(String[] args) {
-        ApplicationContext heart = new ClassPathXmlApplicationContext(
-                "qalasa.xml",
-                "samala.xml",
-                "mirror.xml",
-                "simpleSpell.xml",
-                "compoundSpell.xml",
-                "net.xml",
-                "pearl.xml");
+        ApplicationContext heart = new AnnotationConfigApplicationContext(QalasaConfig.class);
         Samala samala = heart.getBean("samala", Samala.class);
-        samala.getBud().contemplate(heart.getBean("silverPalace", SilverPalace.class).getFate());
-        samala.wander(samala.getQalasaSight().unfoldPilgrimage());
+        samala.getBud().contemplate(samala.getRevelations());
+        samala.wander(samala.getPilgrimage());
     }
 }

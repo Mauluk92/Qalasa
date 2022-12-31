@@ -12,6 +12,8 @@ import java.util.Objects;
  * @uses Sigill
  * @uses Verb
  */
+
+
 public class Word extends AbstractSpell {
 
     private Sigill sigill;
@@ -35,6 +37,8 @@ public class Word extends AbstractSpell {
     public Verb revealVerb(){
         return this.action;
     }
+
+    public Sigill revealSigill() {return this.sigill; }
 
     @Override
     public Boolean trace() {

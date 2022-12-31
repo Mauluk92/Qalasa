@@ -12,6 +12,10 @@ public class Rest extends AbstractSpell {
         return true;
     }
 
+    public Rest(Word commandWord){
+        this.commandWord = commandWord;
+    }
+
     public void setCommandWord(Word word){
         this.commandWord = word;
     }

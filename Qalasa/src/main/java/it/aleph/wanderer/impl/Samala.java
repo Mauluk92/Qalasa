@@ -9,8 +9,13 @@ import it.aleph.spell.impl.Rest;
 import it.aleph.spell.impl.enums.Verb;
 import it.aleph.wanderer.Wanderer;
 import it.aleph.wanderer.impl.enums.SoulState;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static it.aleph.spell.impl.enums.Verb.NE;
 import static it.aleph.spell.impl.enums.Verb.QY;
@@ -21,16 +26,38 @@ import static it.aleph.wanderer.impl.enums.SoulState.PURIFIED_STATE;
  * Samalà was once a powerful wizard that came from the kingdom of stars, a plane of existence really close
  * to the Void plane, which embrace everything.
  */
+@Component
+@Qualifier("samala")
 public class Samala implements Wanderer<EnchantedMirror> {
 
     private final Bud bud;
     private SoulState purifiedState;
-
+    @Autowired
     private Qalasa qalasaSight;
 
-    public Samala(SoulState purifiedState, Bud bud){
-        this.purifiedState = purifiedState;
-        this.bud = bud;
+    private final List<String> revelations;
+
+    @Autowired
+    @Qualifier("pearlAleph")
+    private QalasaPearl<EnchantedMirror> pilgrimage;
+
+    @Autowired
+    public Samala(List<String> revelations){
+        this.purifiedState = CORRUPTED_STATE;
+        this.bud = new Bud();
+        this.revelations = revelations;
+    }
+
+    public List<String> getRevelations() {
+        return this.revelations;
+    }
+
+    public void setPilgrimage(QalasaPearl<EnchantedMirror> pilgrimage) {
+        this.pilgrimage = pilgrimage;
+    }
+
+    public QalasaPearl<EnchantedMirror> getPilgrimage(){
+        return this.pilgrimage;
     }
 
     public void setQalasaSight(Qalasa qalasaSight) {
